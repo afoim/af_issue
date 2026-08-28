@@ -27,18 +27,24 @@ body:
       placeholder: www.acofork.com 或 status.acofork.com
 
   - type: dropdown
-    id: area
+    id: site_section
     attributes:
-      label: 相关领域
+      label: 涉及区块
+      description: 请选择发生问题的本站区块；若同时影响多个区块，请选择“多个区块/无法确定”，并在问题描述中说明。
       options:
+        - 主页
         - 博客
-        - AI 生图
-        - 论坛
-        - 账号与登录
-        - 计费与积分
-        - 其他
+        - AI生图
+        - 交互小说
+        - 追番
+        - 工具集
+        - 连接
+        - 旧站归档
+        - 账号
+        - 多个区块/无法确定
     validations:
       required: true
+
 
   - type: textarea
     id: problem
