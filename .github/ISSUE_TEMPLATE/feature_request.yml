@@ -7,8 +7,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        请描述你真正想解决的问题，而不只是提出一个功能名称。
-        
+        这里用于提出新功能或改进建议，不用于报告故障。
+        请描述需求和使用场景，不必提供技术实现方案。
+
         请不要填写密码、Token、Cookie、验证码或其他敏感信息。
 
   - type: checkboxes
@@ -19,18 +20,11 @@ body:
         - label: "我确认本建议针对 2x.nz、*.2x.nz、acofork.com 或 *.acofork.com 域名下的项目页面或服务。"
           required: true
 
-  - type: input
-    id: related_domain
-    attributes:
-      label: 相关域名（可选）
-      description: 如果建议针对某个具体站点，请填写主机名，例如 `www.acofork.com`、`status.acofork.com`。不要粘贴包含路径、查询参数、Token 或 Cookie 的完整 URL。
-      placeholder: www.acofork.com 或 status.acofork.com
-
   - type: dropdown
     id: site_section
     attributes:
-      label: 涉及区块
-      description: 请选择发生问题的本站区块；若同时影响多个区块，请选择“多个区块/无法确定”，并在问题描述中说明。
+      label: 建议涉及的区块
+      description: 请选择最直接相关的区块；如果同时涉及多个区块，请选择“多个区块/无法确定”。
       options:
         - 主页
         - 博客
@@ -45,29 +39,42 @@ body:
     validations:
       required: true
 
+  - type: input
+    id: related_domain
+    attributes:
+      label: 相关域名（可选）
+      description: 只有建议针对某个具体站点时才填写主机名，例如 www.acofork.com 或 status.acofork.com。不要填写包含路径、查询参数、Token 或 Cookie 的完整 URL。
+      placeholder: www.acofork.com 或 status.acofork.com
 
   - type: textarea
-    id: problem
+    id: request
     attributes:
-      label: 想解决的问题
-      description: 当前遇到了什么不便？谁会受到影响？
-      placeholder: 例如：移动端阅读长文章时，目录不容易展开。
+      label: 希望新增或改进什么
+      description: 用一句话或几句话说明你希望我们增加、修改或优化的内容。
+      placeholder: 例如：为追番页面增加按更新时间排序。
     validations:
       required: true
 
   - type: textarea
-    id: proposal
+    id: use_case
     attributes:
-      label: 你的建议
-      description: 你希望它如何工作？
+      label: 使用场景和原因
+      description: 你在什么情况下需要它？它能解决什么问题？谁会受益？
+      placeholder: 例如：番剧较多时，很难快速找到最近更新的内容。
     validations:
       required: true
 
   - type: textarea
-    id: alternatives
+    id: expected
     attributes:
-      label: 其他方案
-      description: 如果有其他解决方式，也可以写在这里。
+      label: 期望效果（可选）
+      description: 如果你对交互方式、展示位置或优先级有想法，可以写在这里；不需要提供技术实现方案。
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 参考资料或补充说明（可选）
+      description: 可填写示例链接、截图或其他补充信息。请先删除密码、Token、Cookie、验证码和个人隐私。
 
   - type: checkboxes
     id: privacy
