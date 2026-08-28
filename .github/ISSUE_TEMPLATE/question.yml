@@ -1,5 +1,5 @@
 name: 使用咨询
-description: 询问项目功能、使用方法或相关规则
+description: 询问功能用法、账号、规则或页面操作
 title: "[咨询] "
 labels:
   - 使用咨询
@@ -7,8 +7,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        请先说明你想完成什么，以及目前卡在哪一步。
-        
+        这里用于询问如何使用本站功能、账号或相关规则。
+        如果你遇到页面报错或功能失效，请改用“问题反馈”；如果疑似安全漏洞，请通过仓库 Security → Advisories 私密提交。
+
         请不要填写密码、Token、Cookie、验证码或其他敏感信息。
 
   - type: checkboxes
@@ -22,8 +23,8 @@ body:
   - type: dropdown
     id: site_section
     attributes:
-      label: 涉及区块
-      description: 请选择发生问题的本站区块；若同时影响多个区块，请选择“多个区块/无法确定”，并在问题描述中说明。
+      label: 咨询涉及的区块
+      description: 请选择最直接相关的区块；如果同时涉及多个区块，请选择“多个区块/无法确定”。
       options:
         - 主页
         - 博客
@@ -42,61 +43,23 @@ body:
     id: related_domain
     attributes:
       label: 相关域名（可选）
-      description: 如果咨询涉及某个具体站点，请填写主机名，例如 `www.acofork.com`、`status.acofork.com`。不要粘贴包含路径、查询参数、Token 或 Cookie 的完整 URL。
+      description: 如果咨询涉及某个具体站点，请填写主机名，例如 www.acofork.com 或 status.acofork.com。不要填写包含路径、查询参数、Token 或 Cookie 的完整 URL。
       placeholder: www.acofork.com 或 status.acofork.com
-
-  - type: input
-    id: current_uri
-    attributes:
-      label: 当前所在页面 URI（高级用户，可选）
-      description: 填写你当时打开的完整 URI（包含协议、域名和路径），例如 [https://www.acofork.com/account/](https://www.acofork.com/account/)。若查询参数包含 Token、Cookie、验证码或其他敏感值，请先删除或脱敏。
-      placeholder: https://www.acofork.com/account/
-
-  - type: input
-    id: failed_uri
-    attributes:
-      label: 实际失败请求 URI（高级用户，可选）
-      description: 如果实际报错的是页面请求的 API 或资源，请填写失败请求的完整 URI，例如 [https://i.2x.nz/api/login](https://i.2x.nz/api/login)。若与当前页面相同可留空；敏感查询参数请先删除或脱敏。
-      placeholder: https://i.2x.nz/api/login
-
-  - type: dropdown
-    id: request_location
-    attributes:
-      label: 您当时请求时的地理位置（高级用户，可选）
-      description: 请选择大致区域，不要填写精确地址或 IP。
-      options:
-        - 中国大陆
-        - 非中国大陆
-
-  - type: dropdown
-    id: device_type
-    attributes:
-      label: 您使用的设备（高级用户，可选）
-      options:
-        - 移动端
-        - PC端
-
-  - type: input
-    id: browser_version
-    attributes:
-      label: 您使用的浏览器（高级用户，可选）
-      description: 请填写浏览器名称和版本。
-      placeholder: Microsoft Edge 版本 151.0.4129.107 (正式版本) (64 位)
 
   - type: textarea
     id: question
     attributes:
-      label: 你的问题
-      description: 请清楚描述需要解答的内容
-      placeholder: 例如：如何查看生图任务在队列中的位置？
+      label: 具体想咨询什么
+      description: 请直接写出你希望了解的问题，尽量一次只咨询一个主题。
+      placeholder: 例如：如何查看追番列表中最近更新的番剧？
     validations:
       required: true
 
   - type: textarea
     id: context
     attributes:
-      label: 补充背景
-      description: 可填写相关页面、操作步骤和已经尝试过的方法
+      label: 相关背景（可选）
+      description: 可说明你想完成的目标、已经进行的操作、看到的提示或尝试过的方法。若有公开页面，也可以附上链接；请先删除敏感信息。
 
   - type: checkboxes
     id: privacy
