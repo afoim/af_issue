@@ -30,14 +30,14 @@ body:
     id: current_uri
     attributes:
       label: 当前所在页面 URI（高级用户，可选）
-      description: 填写你当时打开的完整 URI（包含协议、域名和路径），例如 https://i.2x.nz/account。若查询参数包含 Token、Cookie、验证码或其他敏感值，请先删除或脱敏。
+      description: 填写你当时打开的完整 URI（包含协议、域名和路径），例如 `https://i.2x.nz/account`。若查询参数包含 Token、Cookie、验证码或其他敏感值，请先删除或脱敏。
       placeholder: https://i.2x.nz/account
 
   - type: input
     id: failed_uri
     attributes:
       label: 实际失败请求 URI（高级用户，可选）
-      description: 如果实际报错的是页面请求的 API 或资源，请填写失败请求的完整 URI，例如 https://api-xxx.acofork.com/auth/login。若与当前页面相同可留空；敏感查询参数请先删除或脱敏。
+      description: 如果实际报错的是页面请求的 API 或资源，请填写失败请求的完整 URI，例如 `https://api-xxx.acofork.com/auth/login`。若与当前页面相同可留空；敏感查询参数请先删除或脱敏。
       placeholder: https://api-xxx.acofork.com/auth/login
 
   - type: dropdown
