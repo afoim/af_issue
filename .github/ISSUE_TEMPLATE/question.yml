@@ -1,0 +1,35 @@
+name: 使用咨询
+description: 询问项目功能、使用方法或相关规则
+title: "[咨询] "
+labels:
+  - 使用咨询
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请先说明你想完成什么，以及目前卡在哪一步。
+        
+        请不要填写密码、Token、Cookie、验证码或其他敏感信息。
+
+  - type: textarea
+    id: question
+    attributes:
+      label: 你的问题
+      description: 请清楚描述需要解答的内容
+      placeholder: 例如：如何查看生图任务在队列中的位置？
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 补充背景
+      description: 可填写相关页面、操作步骤和已经尝试过的方法
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 提交确认
+      options:
+        - label: 我确认内容中不包含密码、Token、Cookie、验证码或不必要的个人信息。
+          required: true
