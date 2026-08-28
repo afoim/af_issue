@@ -11,6 +11,21 @@ body:
         
         请不要填写密码、Token、Cookie、验证码或其他敏感信息。
 
+  - type: checkboxes
+    id: domain_scope
+    attributes:
+      label: 域名范围确认
+      options:
+        - label: "我确认本建议针对 2x.nz、*.2x.nz、acofork.com 或 *.acofork.com 域名下的项目页面或服务。"
+          required: true
+
+  - type: input
+    id: related_domain
+    attributes:
+      label: 相关域名（可选）
+      description: 如果建议针对某个具体站点，请填写主机名，例如 i.2x.nz、api-xxx.acofork.com。不要粘贴包含路径、查询参数、Token 或 Cookie 的完整 URL。
+      placeholder: i.2x.nz 或 api-xxx.acofork.com
+
   - type: dropdown
     id: area
     attributes:
