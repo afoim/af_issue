@@ -19,6 +19,25 @@ body:
         - label: "我确认该问题发生在 2x.nz、*.2x.nz、acofork.com 或 *.acofork.com 域名下。"
           required: true
 
+  - type: dropdown
+    id: site_section
+    attributes:
+      label: 涉及区块
+      description: 请选择发生问题的本站区块；若同时影响多个区块，请选择“多个区块/无法确定”，并在问题描述中说明。
+      options:
+        - 主页
+        - 博客
+        - AI生图
+        - 交互小说
+        - 追番
+        - 工具集
+        - 连接
+        - 旧站归档
+        - 账号
+        - 多个区块/无法确定
+    validations:
+      required: true
+
   - type: input
     id: affected_domain
     attributes:
