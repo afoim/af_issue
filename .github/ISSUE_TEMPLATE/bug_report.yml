@@ -23,7 +23,7 @@ body:
     id: affected_domain
     attributes:
       label: 具体报错域名（可选）
-      description: 尽量填写实际报错的主机名，例如 www.acofork.com、status.acofork.com。只填写域名，不要粘贴包含路径、查询参数、Token 或 Cookie 的完整 URL；无法确定时可填写“不确定”。
+      description: 尽量填写实际报错的主机名，例如 `www.acofork.com`、`status.acofork.com`。只填写域名，不要粘贴包含路径、查询参数、Token 或 Cookie 的完整 URL；无法确定时可填写“不确定”。
       placeholder: www.acofork.com 或 status.acofork.com
 
   - type: input
