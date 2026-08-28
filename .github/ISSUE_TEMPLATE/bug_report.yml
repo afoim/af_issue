@@ -10,6 +10,21 @@ body:
         请不要填写密码、Token、Cookie、验证码、完整支付凭证或其他不必要的个人信息。
         如果是安全漏洞，请前往仓库的 Security → Advisories 私密提交，不要公开发布。
 
+  - type: checkboxes
+    id: domain_scope
+    attributes:
+      label: 域名范围确认
+      options:
+        - label: "我确认该问题发生在 2x.nz、*.2x.nz、acofork.com 或 *.acofork.com 域名下。"
+          required: true
+
+  - type: input
+    id: affected_domain
+    attributes:
+      label: 具体报错域名（可选）
+      description: 尽量填写实际报错的主机名，例如 i.2x.nz、api-xxx.acofork.com。只填写域名，不要粘贴包含路径、查询参数、Token 或 Cookie 的完整 URL；无法确定时可填写“不确定”。
+      placeholder: i.2x.nz 或 api-xxx.acofork.com
+
   - type: dropdown
     id: category
     attributes:
