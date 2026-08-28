@@ -1,4 +1,4 @@
-blank_issues_enabled: true
+blank_issues_enabled: false
 contact_links:
   - name: 私密提交安全漏洞
     url: https://github.com/afoim/af_issue/security/advisories
