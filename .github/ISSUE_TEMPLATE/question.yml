@@ -23,7 +23,7 @@ body:
     id: related_domain
     attributes:
       label: 相关域名（可选）
-      description: 如果咨询涉及某个具体站点，请填写主机名，例如 www.acofork.com、status.acofork.com。不要粘贴包含路径、查询参数、Token 或 Cookie 的完整 URL。
+      description: 如果咨询涉及某个具体站点，请填写主机名，例如 `www.acofork.com`、`status.acofork.com`。不要粘贴包含路径、查询参数、Token 或 Cookie 的完整 URL。
       placeholder: www.acofork.com 或 status.acofork.com
 
   - type: input
